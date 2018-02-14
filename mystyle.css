@@ -25,11 +25,12 @@ section, nav {
    font-size: 100%;
    padding: 0px;
    margin: 0px;
-
+   box-sizing: border-box;
 }
 
 nav a {
    text-decoration: none;
+   top: 0px;
 }
 
 
@@ -39,11 +40,11 @@ body {
    top: 0px;
    left: 0px;
    position: absolute;
-   width: 98%;
-   min-width: 1000px;
-   max-width: 1400px;
+   width: 99%;
+   /*min-width: 1000px;*/
+   /*max-width: 1400px;*/
    z-index: 2;
-   height: 885px;
+   height: 100vh;
 }
 
 
@@ -51,13 +52,14 @@ body {
 header {
    /*background-color: rgb(55, 121, 121);*/
    background-color: rgb(45, 121, 121);
-   position: absolute;
-   top: 0px;
+   position: relative;
+   /*top: 0px;*/
    left: 0px;
    /*padding-bottom: 27.3%;*/
    width: 20%;
-   height: 100%;
-   z-index: 1;
+   height: 100vh;
+   float: left;
+   /*z-index: 1;*/
 }
 header p {
    text-align: center;
@@ -68,13 +70,17 @@ header p {
 header img {
    width: 60%;
    margin-left: 20%;
-   margin-top: 10%;
+   /*margin-top: 10%;*/
 }
 
 
 /* Horizontal Navigation List styles */
+nav {
+   top: 0px;
+}
 nav.horizontal {
    margin-left: 20%;
+
    width: 57%;
    position: relative;
    z-index: 4
@@ -100,40 +106,15 @@ nav.horizontal a:hover {
 }
 
 
-/* Vertical Navigation List styles */
-
-nav.vertical p {
-   margin-bottom: 20px;
-}
-
-nav.vertical li {
-   font-size: 85%;
-   list-style: none;
-}
-
-nav.vertical li.newgroup {
-   padding-top: 25px;
-}
-
-nav.vertical li a {
-   color: white;
-   display: block;
-   text-indent: 10px;
-}
-
-nav.vertical li a:hover {
-   background-color: rgb(51, 51, 51);
-   outline: 2px solid rgb(215, 181, 151);
-}
-
-
 /* Main Section styles */
 #main {
-   clear: left;
+   /*clear: left;*/
    float: left;
-   margin-left: 21%;
-   margin-top: 20px;
+   left: 22%;
+   /*margin-top: 20px;*/
    width: 56%;
+   height: 100vh;
+   padding: 0 5px 0 5px;
 }
 
 #main > h1 {
@@ -154,18 +135,18 @@ nav.vertical li a:hover {
 #main p {
    text-align: justify;
    font-size: 14px;
-   margin: 20px;
-   margin-right: 25px;
+   /*margin: 20px;*/
+   /*margin-right: 25px;*/
    margin-bottom: 0px;
 }
 
 #main ul {
    list-style-type: disc;
-   margin: 25px;
+   /*margin: 25px;*/
 }
 
 #main ul li {
-   margin-bottom: 3px;
+   /*margin-bottom: 3px;*/
    font-size: 14px;
    text-align: justify;
 }
@@ -175,25 +156,26 @@ nav.vertical li a:hover {
 aside {
    position: relative;
    background-color: rgb(225, 221, 211);
-   top: 15px; /* adjust to the top News and Events*/
+   top: 0px; /* adjust to the top News and Events*/
    left: 0px;
    margin-top: 0px;
    width: 100%;
-   height: 780px;
+   /*height: 780px;*/
+   height: 100vh;
    overflow: auto;
    z-index: 3;
 }
 aside h1 {
    font-size: 105%;
    font-weight: bold;
-   margin-bottom: 10px;
+   margin-bottom: 10px;*/
    text-align: center;
 }
 
-aside h2 {
+/*aside h2 {
    font-size: 85%;
    font-weight: bold;
-}
+}*/
 aside p {
    font-size: 75%;
    margin: 20px;/* */
@@ -203,7 +185,7 @@ aside ul {
    list-style-type: disc;
    margin-left: 30px;
    margin-right: 40px;
-   margin-top: 25px;
+   /*margin-top: 25px;*/
    z-index: 4;
 }
 
@@ -219,24 +201,26 @@ aside ul li {
 /* Article styles */
 article {
    background-color: rgb(225, 221, 211);
-   float: left;
-   margin-left: 77%;
+   float: right;
+   /*margin-left: 77%;*/
    width: 23%;
-   height: 100%;
-   top: 0px;
-   position: absolute;
-   z-index: 3;
+   height: 100vh;
+   top: -27px;
+   position: relative;
+   /*z-index: 3;*/
 }
 
 article hgroup {
    /*background: rgb(189, 131, 82) url(alisha.png) bottom right no-repeat;*/
    background: rgb(189, 131, 82) bottom right no-repeat;
    color: rgb(215, 181, 151);
-   margin-top: 0px;
-   margin-bottom: 0px;
-   height: 27x;
+   /*margin-top: 0px;*/
+   /*margin-bottom: 0px;*/
+   height: 27px;
    text-indent: 0px;
    position: relative;
+   top: 0px;
+   z-index: 4;
 }
 
 article hgroup h1 {
@@ -247,6 +231,7 @@ article hgroup h1 {
    height: 27px;
    color: white;
    position: relative;
+   top: 2px;
    z-index: 4;
 }
 
@@ -264,7 +249,7 @@ article ul {
    list-style-type: disc;
    margin-left: 40px;
    margin-right: 40px;
-   margin-top: 20px;
+   /*margin-top: 20px;*/
 }
 
 article ul li {
@@ -306,24 +291,26 @@ figure figcaption {
 
 footer {
    position: relative;
-   float: center;
+   float: right;
    width: 100%;
    text-align: center;
-   top: 0px;
-   margin-top: 0px;
+   bottom: 0px;
+   /*margin-top: 0px;*/
    border-top: 2px solid #369;
    height: 5%;
    z-index: 3;
+   /*box-sizing: border-box;*/
 }
 
 footer address {
    width: 100%;
-   clear: left;
+   clear: both;
    font-size: 18px;
    font-style: normal;
    font-variant: small-caps;
    border-top: 2px solid black;
    border-bottom: 2px solid black;
    background-color: rgb(55, 177, 200);
+   top: 30px;
    z-index: 3;
 }
